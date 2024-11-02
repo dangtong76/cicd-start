@@ -12,7 +12,7 @@ RUN mkdir /code && chown 1000:1000 /code
 # Update & Install the packages
 RUN apt-get update && apt-get -y upgrade
 
-RUN apt-get install -y ca-certificates curl gnupg software-properties-common wget unzip apt-transport-https telnet net-tools vim iputils-ping openjdk-11-jdk python3 python3-pip gh
+RUN apt-get update && apt-get install -y ca-certificates curl gnupg software-properties-common wget unzip apt-transport-https telnet net-tools vim iputils-ping openjdk-11-jdk python3 python3-pip gh
 
 # Install Jupyter
 RUN pip install --no-cache-dir --break-system-packages jupyter ipykernel
